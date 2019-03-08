@@ -1,5 +1,4 @@
-# (incomplete) High NA single-objective lightsheet microscope
-
+# (incomplete) High NA single-objective lightsheet
 <a href="https://doi.org/"><img src="https://zenodo.org/badge/DOI/.svg" alt="DOI"></a>
 
 A scientific publication, describing way to improve microscopy. This repository hosts everything you need to reproduce our results. Read the publication here: (not created yet)
