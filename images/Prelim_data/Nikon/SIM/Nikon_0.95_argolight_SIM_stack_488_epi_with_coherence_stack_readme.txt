@@ -1,0 +1,9 @@
+1) Manually crop xy to 500x500 using ImageJ
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Select substack: slices 5-25
+4) Use ImageJ file-> save as-> image sequence->
+    format: PNG
+    name: img
+    start at: 0
+    digits: 4
+5) Use output directly
