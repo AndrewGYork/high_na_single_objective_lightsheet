@@ -1,0 +1,15 @@
+1) Manually crop xy to 500x500 using ImageJ
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Update Image-> Properties with z pixel calibration:
+    - calculate pixel size in xy: 6.5um/40x = 0.1625um
+    - divide piezo step size by xy step: 0.5um/0.1625um = 3.08
+    - set z pixel step size to 3.08
+4) Use ImageJ Image-> Stacks-> 3D Project...->
+    see screen shot for settings (1degree step, interpolate, default the rest)
+5) Use ImageJ file-> save as-> image sequence->
+    format: PNG
+    name: img
+    start at: 0
+    digits: 4
+6) Run ffmeg command to convert image series to mp4:
+    ffmpeg -y -r 25 -f image2 -i img%04d.png -movflags faststart -pix_fmt yuv420p -vcodec libx264 -vf scale=trunc(iw/2)*2:trunc(ih/2)*2 -preset veryslow -crf 25 figure.mp4
