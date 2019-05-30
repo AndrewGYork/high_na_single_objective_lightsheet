@@ -1,0 +1,25 @@
+AMS-AGY (min-max)
+1) No cropping applied
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Use File-> Save As-> PNG
+
+Nikon (min-max)
+1) No cropping applied
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Use File-> Save As-> PNG
+
+AMS-AGY (saturated)
+1) No cropping applied
+2) Use Image-> Adjust-> Brightness/Contrast
+    - Select 55-251
+    - Hit apply
+3) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+4) Use File-> Save As-> PNG
+
+Nikon (saturated)
+1) No cropping applied
+2) Use Image-> Adjust-> Brightness/Contrast
+    - Select 55-251
+    - Hit apply
+3) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+4) Use File-> Save As-> PNG

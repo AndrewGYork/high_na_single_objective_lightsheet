@@ -1,0 +1,9 @@
+AMS-AGY (min-max)
+1) Manually crop xy to 1250x1250 using ImageJ
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Use File-> Save As-> PNG
+
+Nikon (min-max)
+1) Manually crop xy to 1250x1250 using ImageJ
+2) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+3) Use File-> Save As-> PNG
