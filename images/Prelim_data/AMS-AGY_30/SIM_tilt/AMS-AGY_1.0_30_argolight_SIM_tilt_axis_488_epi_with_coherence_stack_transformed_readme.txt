@@ -1,0 +1,52 @@
+1) Manually crop xy to 500x500 using ImageJ
+2) Select substack: slices 1-150
+3) Use Image-> Stacks-> Reslice...[/]: default settings
+    - Output spacing = 1, Start at = top, everything else unticked
+4) Use Image-> Adjust-> Canvas Size...:
+    - Width = 500
+    - Height = 300 (i.e. pad image by ~150 pixels on the bottom)
+    - Position = Top-Center
+    - Zero Fill = unticked
+5) Go File-> New-> Script...
+    - Select Langauge IJ1 Macro
+    - Paste the following ***macro*** for image translation:
+***
+xTranslate=0;
+yTranslate=0.325;
+/*Translate a stack of images so that the first image is moved n
+pixels in the X direction, the second moved 2n pixels, the third 3n pixels
+and so on..
+the variable "n" is represented by xTranslate and yTranslate
+*/
+for(i=1;i<=nSlices;i++){
+setSlice(i);
+run("Translate...", "x="+i*xTranslate+" y="+i*yTranslate+" interpolation=Bilinear slice");
+}
+***
+    - Adjust the 'yTranslate' value as needed according the alpha tilt of
+    microscope and piezo step size:
+        yTranslate = sin(alpha)/[z-piezo/(sCMOSpixel/mag)]
+                   = sin(30) / [0.25/(6.5/40)] = 0.325 (in this case)
+    - Run macro on stack
+6) Reverse the re-slice operation at step 3)
+7) Select sub-stack: slices 145-170
+8) Use Image-> Scale...
+    - X Scale = 1
+    - Y Scale = cos(alpha) = cos(30) = 0.866
+    - Z Scale = 1
+    - Width, Height, Depth = 500, 500, 26
+    - Interpolation = Bilinear
+    - 3 boxes = ticked
+    - Title = default...
+9) Use Image-> Adjust-> Canvas Size...:
+    - Width = 500
+    - Height = 500 (i.e. pad image to orginal size for comparison)
+    - Position = Center
+    - Zero Fill = unticked
+10) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255 
+11) Use ImageJ file-> save as-> image sequence->
+    format: PNG
+    name: img
+    start at: 0
+    digits: 4
+12) Use output directly

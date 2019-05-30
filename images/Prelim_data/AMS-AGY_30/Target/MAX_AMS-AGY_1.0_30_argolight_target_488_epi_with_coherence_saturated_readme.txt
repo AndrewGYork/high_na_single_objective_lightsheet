@@ -1,0 +1,20 @@
+1) No cropping applied
+2) Use Image-> Stacks-> Z Project...-> Max Intensity (option)
+3) Use Image-> Scale:
+    - X scake = 1
+    - Y scale = cosine(alpha) = cos(30) = 0.866
+    - Width = auto
+    - Height = auto
+    - Interpolation = Bilinear
+    - Average when downsing = ticked
+    - Create new window = ticked
+4) Pad image to re-size to original using Image-> Adjust-> Canvas Size:
+    - X = 2060
+    - Y = 2048
+    - Center
+    - Zero fill = unticked
+5) Use Image-> Adjust-> Brightness/Contrast
+    - Select 48-804
+    - Hit apply    
+6) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+7) Use File-> Save As-> PNG
