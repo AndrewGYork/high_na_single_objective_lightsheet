@@ -127,6 +127,11 @@ strong {
   font-weight:700;
 }
 
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
 sup {
   vertical-align: super;
   font-size: smaller;
