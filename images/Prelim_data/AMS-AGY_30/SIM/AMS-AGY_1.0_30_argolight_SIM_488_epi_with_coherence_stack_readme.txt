@@ -1,0 +1,11 @@
+1) Manually crop xy to 500x500 using ImageJ
+2) Select substack: slices 10-160
+3) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255 
+4) Use ImageJ file-> save as-> image sequence->
+    format: PNG
+    name: img
+    start at: 0
+    digits: 4
+5) Run ffmeg command to convert image series to mp4:
+    ffmpeg -y -r 50 -f image2 -i img%04d.png -movflags faststart -pix_fmt yuv420p -vcodec libx264 -vf scale=trunc(iw/2)*2:trunc(ih/2)*2 -preset veryslow -crf 18 figure.mp4
+

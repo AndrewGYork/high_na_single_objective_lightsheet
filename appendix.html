@@ -33,11 +33,11 @@ Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">High NA single-objective lightsheet</h1>
+        <h1 class="header">High NA single-objective light-sheet</h1>
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/AMSikking/high_na_single_objective_lightsheet/zipball/master">Download ZIP</a></li>
-          <li><a class="buttons github" href="https://github.com/AMSikking/high_na_single_objective_lightsheet">View On GitHub</a></li>
-          <li><a class="buttons pdf" href="./high_NA_lightsheet_appendix%20by%20AMSikking.pdf">Download PDF</a></li>
+          <li class="download"><a class="buttons" href="./appendix.html#under_construction">Download ZIP</a></li>
+          <li><a class="buttons github" href="./appendix.html#under_construction">View On GitHub</a></li>
+          <li><a class="buttons pdf" href="./appendix.html#under_construction">Download PDF</a></li>
         </ul>
         <p class="header" style="text-align:left;">This project is maintained by <a class="header name" href="https://github.com/amsikking">amsikking</a> in the <a class="header name" href="https://andrewgyork.github.io/">York lab</a>, and was funded by <a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
       </header>
@@ -50,8 +50,12 @@ The real text begins here.
 <h1>(in progress) Appendix</h1>
 <h3 class="onlyprint">
 Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version of this article, please visit one of the following links: <a href="https://amsikking.github.io/high_na_single_objective_lightsheet">https://amsikking.github.io/high_na_single_objective_lightsheet</a> <a href="https://andrewgyork.github.io/high_na_single_objective_lightsheet">https://andrewgyork.github.io/high_na_single_objective_lightsheet</a> <a href="https://calico.github.io/high_na_single_objective_lightsheet">https://calico.github.io/high_na_single_objective_lightsheet</a></h3>	
-<h2>High NA single objective light sheet</h2>
+<h2>High NA single-objective light-sheet</h2>
 <p><a href="./index.html" title="Main text" target="_self">Back to the main text</a></p>
+
+<h3 id="under_construction">Under construction</h3>
+
+<p>The <code>Download Zip</code>, <code>View on Github</code> and <code>Download PDF</code> links in the sidebar are not yet functional.</p>
 
 <h3 id="Design">
 Design</h3>
@@ -61,10 +65,9 @@ Design</h3>
 <h3 id="Build">
 Build</h3>
 
-<h4 id="Parts_em_optical">(untested) Parts list - emission path</h4>
+<h4 id="Parts_em_optical">Parts list - emission path</h4>
 
-<p>This table can be used as a shopping list for the current <strong>(untested)</strong> design of the emission path. For clarity, the elements are listed in order in which they are physically arranged from the sample to the camera. All of the optics are 'stock' parts except for items 10 and 11 which we are currently 'bespoke'. Item 10 can easily be substituted for a standard coverslip. If you are interested in item 11, the 'frustum' objective, then please contact us directly:</p>
-<p><a href="mailto:amsikking+highNAlightsheet@calicolabs.com" target="_self">amsikking+highNAlightsheet@calicolabs.com</a>.</p>
+<p>This table can be used as a shopping list for the current design of the emission path. For clarity, the elements are listed in order in which they are physically arranged (from sample to camera). All of the optics are 'stock' parts except for items 10 and 11 which are currently 'bespoke'. Item 10 can easily be substituted for a standard coverslip. If you are interested in the glass-tipped objective (item 11) then please see the following section on the <a href="#AMS-AGY_v1.0" target="_self">AMS-AGY objective v1.0.</a></p>
 
 <div>
 <style scoped>
@@ -76,13 +79,13 @@ table, th, td {
 }
 </style>
 <table>
-  <tr><th>Item No.</th>	<th>Supplier</th>			<th>Part</th>  <th>Description</th><th>Qty</th>
+  <tr><th>Item #</th>	<th>Supplier</th>			<th>Part</th>  <th>Description</th><th>Qty</th>
   <tr><td>1</td>		<td>Biologist</td>			<td>Sample</td>
-  <td>Preferably live biology with a refractive index in the range: 1.35-1.4</td>						<td>1</td></tr>
+  <td>Biological sample, preferably with a refractive index in the range: 1.35-1.4 (typical for live cells)</td>						<td>1</td></tr>
   <tr><td>2</td>		<td>Nikon</td>				<td>MRD73950</td>
-  <td>CFI60 Plan Apochromat Lambda S 100x Silicone Immersion Objective Lens, N.A. 1.35, W.D. 0.3mm, F.O.V. 22mm, DIC, Correction Collar 0.15-0.19mm</td>																				<td>1</td></tr>
+  <td>CFI60 Plan Apochromat Lambda S 100x Silicone Immersion Objective Lens, N.A. 1.35, W.D. 0.3 mm, F.O.V. 22 mm, Correction Collar 0.15-0.19 mm</td>																				<td>1</td></tr>
   <tr><td>3</td>		<td>Nikon</td>				<td>MXA22018</td>
-  <td>CFI Second Lens Unit, Tube Lens Element</td>														<td>3</td></tr>
+  <td>CFI Second Lens Unit, Tube Lens Element, EFL=200 mm</td>														<td>3</td></tr>
   <tr><td>4</td>		<td>Thorlabs</td>			<td>CLS-SL</td>
   <td>Scan Lens with Large Field of View, 400 to 750 nm, EFL=70 mm</td>									<td>1</td></tr>
   <tr><td>5</td>		<td>Thorlabs</td>			<td>GVS201</td>
@@ -94,19 +97,56 @@ table, th, td {
   <tr><td>8</td>		<td>Chroma</td>				<td>ZT405/488/561/640rpcv2</td>
   <td>Quad band dichroic UF1 (26x38x1)mm (excitation coupling)</td>													<td>1</td></tr>
   <tr><td>9</td>		<td>Nikon</td>				<td>MRD00405</td>
-  <td>CFI60 Plan Apochromat Lambda 40x Objective Lens, N.A. 0.95, W.D. 0.17-0.25mm, F.O.V. 25mm, DIC, Correction Collar 0.11-0.23mm, Spring Loaded</td>																			<td>1</td></tr>
+  <td>CFI60 Plan Apochromat Lambda 40x Objective Lens, N.A. 0.95, W.D. 0.17-0.25 mm, F.O.V. 25 mm, Correction Collar 0.11-0.23 mm</td>																			<td>1</td></tr>
   <tr><td>10</td>		<td>Mark Optics</td>		<td>N/A</td>
-  <td>Window, NBK-7, OD: 4mm +/- 0.2mm, Thk: 0.170mm +/- 0.05mm, polished both sides 40/20 (best effort 20/10), TWE 1/4 wave - best effort, parallelism less than 10um, coated both sides BBAR - VIS, Tavg. greater than 99% @ 400nm-700nm @ 0 Degrees AOI</td>																										<td>1</td></tr>
-  <tr><td>11</td>		<td>Special Optics</td>			<td>N/A</td>
-  <td>'frustum' objective (bespoke)</td>																<td>1</td></tr>
+  <td>Window, NBK-7, OD: 4 mm +/- 0.2 mm, Thk: (0.170 +/- 0.05) mm, polished both sides 40/20, TWE 1/4 wave, parallelism &lt;10 &mu;m, coated both sides BBAR - VIS, T<sub>avg</sub> &gt;99&percnt; @ 400 nm-700 nm @ 0&deg; AOI</td>																										<td>1</td></tr>
+  <tr><td>11</td>		<td>ASI</td>			<td>AMS-AGY v1.0</td>
+  <td>Special glass-tipped objective</td>																<td>1</td></tr>
   <tr><td>12</td>		<td>Chroma</td>				<td>ZET405/488/561/640m</td>
-  <td>Quad emmission filter, 25mm Diameter mounted</td>													<td>1</td></tr>
+  <td>Quad emission filter, 25 mm diameter mounted</td>													<td>1</td></tr>
   <tr><td>13</td>		<td>Nikon</td>				<td>MXA22018</td>
   <td>(from above set of 3)</td>																		<td>0</td></tr>
   <tr><td>14</td>		<td>PCO</td>				<td>edge 4.2</td>
-  <td>sCMOS camera, 2048x2048 pixels with 6.5x6.5 μm2 size, 100 fps full field, TTL trigger <50 μs response</td>																										<td>1</td></tr>
+  <td>sCMOS camera, 2048x2048 pixels with 6.5x6.5 μm<sup>2</sup> size, 100 fps full field, TTL trigger &lt;50 μs response</td>																										<td>1</td></tr>
 </table>
 </div>
+
+<h4 id="AMS-AGY_v1.0">AMS-AGY objective - v1.0</h4>
+
+<p>The critical enabling component of the high NA single-objective light-sheet microscope is the bespoke glass-tipped objective. By choosing all stock parts throughout the design of the rest of the microscope many of the opto-mechanical difficulties are compressed into the design of this final objective (Figure A1). The optical performance and geometry of this lens allow it to extract a high resolution image as close as ~100 &mu;m to a flat surface, with negligible loss in resolution and high transmission, over a range of tilt angles from 0-45 degrees.</p>
+
+<figure id="Figure_A1">
+<img src="images/AMS-AGY_objective_v1.0/AMS-AGY_objective_v1.0_drawing.png" alt="Figure A1" id="Figure_A1_svg" style="width:100%;">
+<img src="images/AMS-AGY_objective_v1.0/AMS-AGY_objective_v1.0_render.png" alt="Figure A2" id="Figure_A2_svg_1" style="width:49%;">
+<img src="images/AMS-AGY_objective_v1.0/AMS-AGY_objective_v1.0_photo.jpg" alt="Figure A2" id="Figure_A2_svg_2" style="width:49%;">
+<figcaption><strong>Figure A1: Bespoke glass-tipped objective.</strong> A drawing <strong>a)</strong> shows the critical opto-mechanically coupled design considerations for the bespoke objective: to collect a tilted air space image just ~100 &mu;m from a flat surface, with a range of tilt angles from 0-45 degrees. A CAD rendering <strong>b)</strong> of the design and a photo <strong>c)</strong> of the final working lens.</figcaption>
+</figure>
+
+<p></p>
+<p>The optical specifications are as follows:</p>
+
+<div>
+<style scoped>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+	padding: 1px;
+	font-size: small;
+}
+</style>
+<table>
+  <tr><th>Specification</th>					<th>Description</th></tr>
+  <tr><td>NA = 1.0</td>							<td>numerical aperture</td>
+  <tr><td>&infin;/0</td>						<td>infinity corrected / coverslip thickness</td>
+  <tr><td>WD = 0</td>							<td>working distance</td>
+  <tr><td>EFL = 5 mm</td>						<td>effective focal length (e.g. 40x with 200 mm tube lens)</td>
+  <tr><td>&lambda; = 450-700 nm</td>				<td>color correction</td>
+  <tr><td>FOV (DL) = &empty;150 &mu;m </td>		<td>diffraction limited field of view diameter</td>
+  <tr><td>FOV (bevel) = &empty;250 &mu;m </td>	<td>mechanically limited field of view diameter (1 direction only)</td>
+</table>
+</div>
+
+<p>If you are interested in acquiring this objective then please contact Jon Daniels at <a href="http://www.asiimaging.com/">Applied Scientific Imaging (ASI)</a> directly: <a href="mailto:jon@asiimaging.com" target="_self">jon@asiimaging.com</a> (or <a href="mailto:info@asiimaging.com" target="_self">info@asiimaging.com</a>).</p>
 
 <h4 id="Drawings">Drawings</h4>
 
@@ -115,6 +155,84 @@ table, th, td {
 <h4 id="Alignment">Alignment procedure</h4>
 
 <p>(to update)</p>
+
+<h3 id="Alt_configs">Alternative optical configurations</h3>
+
+<p>Several of our colleagues have expressed interest in modified versions of our primary design. We think this is wonderful, but we've already noticed pitfalls and mistakes that are commonly encountered (but easily avoided). It's critical to use lenses that give the right magnifications, and avoid aberrations. To help avoid these issues, we offer a selection of alternative configurations for high NA single-objective light-sheets. We haven't tested these versions, but based on our knowledge and experience we expect them to have excellent performance (comparable to our primary design). Please try them and give us feedback - we are here to help. Simply substitute the numbered components and re-use the rest of the primary design. Also, if you want to roll your own design, feel free to reach out - some low-effort advice from us might save you a lot of time and money.</p>
+
+<h4>Nikon 100x NA 1.35 - stage or piezo scanning solution</h4>
+
+<p>For those who don't want or need galvo scanning. This design has fewer optics for a system with lower cost, higher efficiency and easier maintenance. It could be a good option for high content screening systems that use stage scannning, or systems that use a piezo on the second objective to take volumes (or a combination of both)</p>
+
+<div>
+<style scoped>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+	padding: 1px;
+	font-size: small;
+}
+</style>
+<table>
+  <tr><th>Item #</th>	<th>Supplier</th>			<th>Part</th>  <th>Description</th><th>Qty</th>
+  <tr><td>3</td>		<td>Thorlabs</td>				<td>TTL165-A</td>
+  <td>Tube Lens, f = 165 mm, ARC: 350-700 nm, External SM2 Threads (NOTE: this is not a Zeiss OEM tube lens)</td>														<td>1</td></tr>
+  <tr><td>4-6</td>		<td>N/A</td>				<td>N/A</td>
+  <td>Galvo scanning relay removed.</td>														<td>0</td></tr>
+  <tr><td>7</td>		<td>Thorlabs</td>			<td>TL300-A</td>
+  <td>Laser Scanning Tube Lens, f = 300 mm, ARC: 400 - 700 nm</td>		  	  		   <td>1</td></tr>
+</table>
+</div>
+
+<h4>Olympus 60x NA 1.3 - galvo scanning solution</h4>
+
+<p>This is a high quality primary objective used by many labs - we expect this version to be popular.</p>
+
+<div>
+<style scoped>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+	padding: 1px;
+	font-size: small;
+}
+</style>
+<table>
+  <tr><th>Item #</th>	<th>Supplier</th>			<th>Part</th>  <th>Description</th><th>Qty</th>
+  <tr><td>2</td>		<td>Olympus</td>				<td>UPLSAPO 60xS2</td>
+  <td>Super Apochromat, 60x Silicone Oil Immersion Objective Lens, N.A. 1.3, W.D. 0.3 mm, F.O.V. 22 mm, DIC, Correction Collar 0.15-0.19 mm</td>																	<td>1</td></tr>
+  <tr><td>3</td>		<td>Thorlabs</td>			<td>TL300-A</td>
+  <td>Laser Scanning Tube Lens, f = 300 mm, ARC: 400 - 700 nm</td>		  	  		   <td>1</td></tr>
+</table>
+</div>
+
+<h4>Olympus 60x NA 1.3 - stage or piezo scanning solution</h4>
+
+<p>For those who don't want or need galvo scanning.</p>
+
+<div>
+<style scoped>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+	padding: 1px;
+	font-size: small;
+}
+</style>
+<table>
+  <tr><th>Item #</th>	<th>Supplier</th>			<th>Part</th>  <th>Description</th><th>Qty</th>
+  <tr><td>2</td>		<td>Olympus</td>				<td>UPLSAPO 60xS2</td>
+  <td>Super Apochromat, 60x Silicone Oil Immersion Objective Lens, N.A. 1.3, W.D. 0.3 mm, F.O.V. 22 mm, DIC, Correction Collar 0.15-0.19 mm</td>																				<td>1</td></tr>
+  <tr><td>3</td>		<td>Thorlabs</td>				<td>TTL165-A</td>
+  <td>Tube Lens, f = 165 mm, ARC: 350-700 nm, External SM2 Threads (this is not a Zeiss OEM tube lens)</td>														<td>1</td></tr>
+  <tr><td>4-6</td>		<td>N/A</td>				<td>N/A</td>
+  <td>Galvo scanning relay removed.</td>														<td>0</td></tr>
+  <tr><td>7</td>		<td>Olympus</td>				<td>SWTLU-C</td>
+  <td>180 mm focal length, tube lens unit.</td>																		<td>1</td></tr>
+  <tr><td>9</td>		<td>Olympus</td>				<td>UPLSAPO 40x2</td>
+  <td>Super Apochromat, 40x Objective Lens, N.A. 0.95, W.D. 0.18 mm, F.O.V. 26.5 mm, Correction Collar 0.11-0.23 mm</td>																		<td>1</td></tr>
+</table>
+</div>
 
 <h3 id="Acquisition">
 Acquisition</h3>
@@ -135,6 +253,80 @@ Acquisition</h3>
 History</h3>
 
 <h4>A summary of single objective light sheet publications (may or may not include...)</h4>
+
+<h3 id="FOM2019_abstract">Focus on Microscopy 2019 - Abstract</h3>
+<h4>"A BOLT-ON SINGLE-OBJECTIVE LIGHT-SHEET DESIGN WITH UNCOMPROMISED NUMERICAL APERTURE"</h4>
+
+<p>Spinning disk confocal modules are “core facility friendly”; they insert conveniently between a commercial microscope base and camera, improve image quality and add no significant drawbacks. In contrast, high numerical aperture (NA) light sheet microscopy often requires radical sample modification, substantial user re-training and fully customized hardware. We present a “core-facility friendly” light-sheet: a “black box” that inserts between a commercial microscope base and camera, greatly reducing photo-toxicity without degrading image quality or breaking compatibility with existing sample preparation.</p>
+<p>In 2008, based on the ingenious ‘Remote-Refocus’ of E.J. Botcherby and T. Wilson
+
+[<a class="citation" href="https://doi.org/10.1016/j.optcom.2007.10.007" title="An optical technique for remote focusing in microscopy; E.J. Botcherby, R. Juškaitis, M.J. Booth and T. Wilson; Optics Communications, vol 281(4), p880-887, (2007)">Botcherby 2007</a>]
+
+, C. Dunsby
+
+[<a class="citation" href="https://doi.org/10.1364/OE.16.020306" title="Optically sectioned imaging by oblique plane microscopy; C. Dunsby; Optics Express, vol 16(25), p20306-20316, (2008)">Dunsby 2008</a>]
+
+invented a brilliant single-objective light sheet technique called 'Oblique Plane Microscopy' (OPM) that bypassed many typical light sheet drawbacks. However his theoretical NA of 0.74 for a water immersion objective was significantly lower than the 1.33 limit for an aqueous sample. In 2018 B. Yang and B. Huang
+
+[<a class="citation" href="https://doi.org/10.1101/273359" title="High Numerical Aperture Epi-illumination Selective Plane Illumination Microscopy; B. Yang, Y. Wang, S. Feng, V. Pessino, N. Stuurman and B. Huang; bioRxiv, (2018)">Yang 2018</a>]
+
+made a clever modification to OPM to achieve an NA of 1.06 and incorporated the elegant galvo-based volumetric scanning method invented by M.B. Bouchard and E.M.C. Hillman
+
+[<a class="citation" href="https://doi.org/10.1038/nphoton.2014.323" title="Swept confocally-aligned planar excitation (SCAPE) microscopy for high-speed volumetric imaging of behaving organisms; M.B. Bouchard, V. Voleti, C.S. Mendes, C. Lacefield, W. B. Grueber, R.S. Mann, R.M. Bruno and E.M.C. Hillman; Nature Photonics, vol 9, p113-119, (2015)">Bouchard 2015</a>].</p>
+
+<p>Building on this work, we present a simple, robust and modular light sheet design with an NA in the 1.2-1.3 range, and discuss the key concepts and considerations for high NA single objective light sheet.</p>
+
+<figure id="FOM2019_Fig_1">
+<img src="images/FOM2019/FOM2019_Abstract_figure_1.png" alt="FOM2019 Figure 1" id="FOM2019_Fig_1_jpg_1" style="width:100%;">
+<figcaption><strong>FOM2019 Fig. 1: Generalized design diagram for an OPM emission path</strong></figcaption>
+</figure>
+
+<h3 id=theoretical_performance>Theoretical performance</h3>
+<p>In the abstract we claim that we "sacrifice no appreciable numerical aperture". The figure below illustrates what we mean by this:</p>
+
+<figure id="ewald_spheres">
+<img src="images/efficiency/ewald_spheres.png" alt="Ewald spheres" id="FOM2019_30_jpg_1" style="width:100%;">
+<figcaption><strong>Ray transmission angles for objectives 1, 2, and 3:</strong> Simple theoretical model showing angular passband of objective 1 (red dots), objective 2 (blue dots, almost invisible), objective 3 (green dots), and all three objectives (yellow dots). This figures is the 3D equivalent of the red, blue, green, and yellow circular regions shown in the top center region of <a href="./index.html#Figure_1">Figure 1</a>. Note that the yellow region almost entirely fills the red region, meaning the system transmits almost all of the rays collected by the primary objective. See below for the <a href="./images/efficiency/spherical_cap_overlap.py">code</a> used to calculate this figure.</figcaption>
+</figure>
+<p></p>
+<p>Each yellow dot on the surface of the illustrated sphere represents a ray angle that can propagate from a point source in the sample, through our three objective lenses, and reach our detector. Each red dot indicates a ray that is collected by our primary objective (1.35 NA silicone), but clipped by our secondary objective (0.95 NA air). Each blue dot represents a ray which passes our secondary objective, but is clipped by our tertiary objective (note that there are almost no blue dots). Each green dot indicates a ray that our tertiary objective (1.0 NA glass) could have collected, if the secondary objective produced it. In our primary design, &gt;95&percnt; of the rays collected by objective 1 can pass objective 2, and &gt;99&percnt; of the rays collected by objective 2 can pass objective 3, giving an effective NA of about 1.33. See the <a href="./images/efficiency/spherical_cap_overlap.py">code</a> below used to calculate these quantities:</p>
+
+<pre><code class="language-python">#!/usr/bin/python3
+import numpy as np
+
+# Three spherical caps: 1 and 2 are centered on the z-axis, 3 is pi
+# radians wide
+cap_1_width = np.arcsin(1.35/1.404) # radians
+cap_2_width = np.arcsin(0.95)       # radians
+sheet_half_angle = 3 * np.pi/180    # radians
+cap_3_tilt = (np.pi/2 - cap_1_width) + sheet_half_angle # radians, in yz plane
+# Generate random points on the surface of a sphere
+num_points = int(3e4)
+phi = np.random.uniform(0, 2*np.pi, num_points)
+theta = np.arccos(np.random.uniform(-1, 1, num_points))
+# Calulate z in a rotated frame where cap 2 is centered on the (new) z-axis:
+z_rotated = (np.sin(cap_3_tilt) * np.sin(theta) * np.sin(phi) +
+             np.cos(cap_3_tilt) * np.cos(theta))
+# Check which caps each point occupies:
+in_cap_1 = theta < cap_1_width
+in_cap_2 = theta < cap_2_width
+in_cap_3 = z_rotated > 0
+# Estimate the fraction of the first cap covered by the second and third caps
+ratio_1_2 = (np.count_nonzero(in_cap_1 & in_cap_2) /
+             np.count_nonzero(in_cap_1))
+ratio_2_3 = (np.count_nonzero(in_cap_2 & in_cap_3) /
+             np.count_nonzero(in_cap_2))
+print("Spherical cap 1 half-angle: %0.3fpi radians (%0.2f degrees)"%(
+    cap_1_width / np.pi, cap_1_width * 180/np.pi))
+print("Spherical cap 2 half-angle: %0.3fpi radians (%0.2f degrees)"%(
+    cap_2_width / np.pi, cap_2_width * 180/np.pi))
+print("Spherical cap 3 tilt angle: %0.3fpi radians (%0.2f degrees)"%(
+    cap_3_tilt / np.pi, cap_3_tilt * 180/np.pi))
+print("Fraction of cap 1 covered by cap 2: %0.5f"%(ratio_1_2))
+print("Fraction of cap 2 covered by cap 3: %0.5f"%(ratio_2_3))
+</code></pre>
+
+<p>Note that our number for "efficiency" is fairly sensitive to how we define efficiency. For example, if objective 1 were 1.33 NA rather than 1.35 NA, then &gt;99&percnt; of the rays collected by the primary can also pass the secondary and tertiary objectives. In our experience, rays at the very edge of the primary objective NA are somewhat aberrated, and do not contribute to improved resolution. We often take pains to differentiate between specified NA (rays which are collected) and useful NA (rays which contribute to improved resolution); our design captures &gt;99&percnt; of our primary objective's <em>useful</em> NA. Note also that if a 0.96 NA air objective ever became available, we could substitute it as the secondary objective and collect &gt;99&percnt; of the primary objective's specified 1.35 NA rays.</p>
 
 </section>
 <footer>

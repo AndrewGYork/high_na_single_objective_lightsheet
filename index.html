@@ -39,11 +39,11 @@ Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">High NA single-objective lightsheet</h1>
+        <h1 class="header">High NA single-objective light-sheet</h1>
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/AMSikking/high_na_single_objective_lightsheet/zipball/master">Download ZIP</a></li>
-          <li><a class="buttons github" href="https://github.com/AMSikking/high_na_single_objective_lightsheet">View On GitHub</a></li>
-          <li><a class="buttons pdf" href="./high_NA_lightsheet%20by%20AMSikking.pdf">Download PDF</a></li>
+          <li class="download"><a class="buttons" href="./appendix.html#under_construction">Download ZIP</a></li>
+          <li><a class="buttons github" href="./appendix.html#under_construction">View On GitHub</a></li>
+          <li><a class="buttons pdf" href="./appendix.html#under_construction">Download PDF</a></li>
         </ul>
         <p class="header" style="text-align:left;">This project is maintained by <a class="header name" href="https://github.com/amsikking">amsikking</a> in the <a class="header name" href="https://andrewgyork.github.io/">York lab</a>, and was funded by <a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
       </header>
@@ -58,7 +58,7 @@ The real text begins here.
 Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version of this article, please visit one of the following links: <a href="https://amsikking.github.io/high_na_single_objective_lightsheet">https://amsikking.github.io/high_na_single_objective_lightsheet</a> <a href="https://andrewgyork.github.io/high_na_single_objective_lightsheet">https://andrewgyork.github.io/high_na_single_objective_lightsheet</a> <a href="https://calico.github.io/high_na_single_objective_lightsheet">https://calico.github.io/high_na_single_objective_lightsheet</a></h3>
 <noscript>
 <h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.</h3></noscript>
-<h2>High NA single objective light sheet</h2>
+<h2>High NA single-objective light-sheet</h2>
 <p class="author_list">Alfred Millett-Sikking<sup>1*</sup> and Andrew G. York<sup>1&dagger;</sup></p>
 <p class="author_affiliations"><sup>1</sup>Calico Life Sciences LLC, South San Francisco, CA 94080, USA</p>
 <p class="contact_email">
@@ -69,51 +69,335 @@ Note that this is a limited PDF or print version; animated and interactive figur
 </p>
 
 <h3>Abstract</h3>
-<p class="abstract"> This research article is a work in progress - please check back in with us regularly to see updates. Eventually this article will describe (at least) how to design and build a bolt on module that converts a typical microscope into a high numerical aperture light sheet instrument that uses only one objective at the sample. This will make the microscope compatible with most traditional sample preparation methods like slides, dishes and multiwell plates. We expect the volumetric imaging performance to be fast, gentle and high resolution, and we predict the resulting instrument will be relatively low cost and simple to align for anyone who wants to build it. We intend it to be 'game changer' in the world of live cell imaging...
+<p class="abstract"> This is an ongoing scientific project, so please check back regularly for updates. We describe how to design and build a module that converts a typical microscope into a high numerical aperture light-sheet microscope that uses only one objective at the sample. We intend it to be 'game changer' in the world of live cell imaging, greatly reducing phototoxicity without degrading image quality or breaking compatibility with existing sample preparation. Our method is compatible with coverslipped samples like slides, dishes and multiwell plates. We expect the volumetric imaging performance to be fast, gentle and high resolution, and the resulting instrument will be low cost and simple to align and maintain.</p>
 
-<p class="abstract">Current content includes:</p>
+<p class="abstract">Current highlights:</p>
 
 <ul>
-<li><a href="#FOM2019_abstract" target="_self">Focus on Microscopy 2019 - Abstract</a></li>
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRIwXpX4IkhVHNha-SlVtEIfNCyUP2Lgmd0w3sIYsaPcLyWO93ec1NDzQRGg6Ws8N22PvYaNCGyIjB9/pub?start=false&loop=false&delayms=60000">Focus on Microscopy 2019 - Presentation slides</a></li>
+<li><a href="#quick_intro" target="_self">NEW - Quick intro</a></li>
+<li><a href="#initial_results" target="_self">NEW - Initial results</a></li>
+<li><a href="#preliminary_data" target="_self">NEW - Preliminary data</a></li>
+<li><a href="./appendix.html#AMS-AGY_v1.0">NEW - AMS-AGY objective v1.0</a></li>
+<li><a href="./appendix.html#Alt_configs">NEW - Alternative optical configurations</a></li>
 <li><a href="./appendix.html#Parts_em_optical">Parts list - emission path optical train</a></li>
+<li><a href="./appendix.html#FOM2019_abstract">Focus on Microscopy 2019 - Abstract</a></li>
+<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRIwXpX4IkhVHNha-SlVtEIfNCyUP2Lgmd0w3sIYsaPcLyWO93ec1NDzQRGg6Ws8N22PvYaNCGyIjB9/pub?start=false&loop=false&delayms=60000">Focus on Microscopy 2019 - Presentation slides.</a> This is currently a must-read for details. (WARNING: Google slides don't seem to work on iPhone; try Chrome).</li>
 </ul>
 
 <h3>Intended audience</h3>
-<p class="abstract">(currently) Directed towards builders, developers, engineers and scientists interested in the latest developments in high numerical aperture light sheet using a single objective lens at the sample.</p>
+<p class="abstract">Microscope builders/developers, microscope vendors and interested potential users.</p>
 
 <h3>Peer review status</h3>
 <p class="abstract">(This article is not yet peer-reviewed)</p>
 
-<h3 id="FOM2019_abstract">Focus on Microscopy 2019 - Abstract</h3>
-<h4>"A BOLT-ON SINGLE-OBJECTIVE LIGHT-SHEET DESIGN WITH UNCOMPROMISED NUMERICAL APERTURE"</h4>
+<h3 id="quick_intro">Quick Intro</h3>
+<p>By combining and improving a series of optical innovations developed by many brilliant scientists
 
-<p>Spinning disk confocal modules are “core facility friendly”; they insert conveniently between a commercial microscope base and camera, improve image quality and add no significant drawbacks. In contrast, high numerical aperture (NA) light sheet microscopy often requires radical sample modification, substantial user re-training and fully customized hardware. We present a “core-facility friendly” light-sheet: a “black box” that inserts between a commercial microscope base and camera, greatly reducing photo-toxicity without degrading image quality or breaking compatibility with existing sample preparation.</p>
-<p>In 2008, based on the ingenious ‘Remote-Refocus’ of E.J. Botcherby and T. Wilson
+[<a class="citation" href="https://doi.org/10.1016/j.optcom.2007.10.007" title="An optical technique for remote focusing in microscopy; E.J. Botcherby, R. Juškaitis, M.J. Booth and T. Wilson; Optics Communications, vol 281(4), p880-887, (2007)">Botcherby 2007</a>,
+<a class="citation" href="https://doi.org/10.1364/OE.16.020306" title="Optically sectioned imaging by oblique plane microscopy; C. Dunsby; Optics Express, vol 16(25), p20306-20316, (2008)">Dunsby 2008</a>,
+<a class="citation" href="https://doi.org/10.1038/nphoton.2014.323" title="Swept confocally-aligned planar excitation (SCAPE) microscopy for high-speed volumetric imaging of behaving organisms; M.B. Bouchard, V. Voleti, C.S. Mendes, C. Lacefield, W. B. Grueber, R.S. Mann, R.M. Bruno and E.M.C. Hillman; Nature Photonics, vol 9, p113-119, (2015)">Bouchard 2015</a>,
+<a class="citation" href="https://doi.org/10.1101/273359" title="High Numerical Aperture Epi-illumination Selective Plane Illumination Microscopy; B. Yang, Y. Wang, S. Feng, V. Pessino, N. Stuurman and B. Huang; bioRxiv, (2018)">Yang 2018</a>,
+<a class="citation" href="https://arxiv.org/abs/1804.09844" title="Integrated one- and two-photon scanned oblique plane illumination (SOPi) microscopy for rapid volumetric imaging; Manish Kumar, Sandeep Kishore, Jordan Nasenbeny, David McLean and Yevgenia Kozorovitskiy; arXiv, (2018)">Kumar 2018</a>]
 
-[<a class="citation" href="https://doi.org/10.1016/j.optcom.2007.10.007" title="An optical technique for remote focusing in microscopy; E.J. Botcherby, R. Juškaitis, M.J. Booth and T. Wilson; Optics Communications, vol 281(4), p880-887, (2007)">Botcherby 2007</a>]
-
-, C. Dunsby
-
-[<a class="citation" href="https://doi.org/10.1364/OE.16.020306" title="Optically sectioned imaging by oblique plane microscopy; C. Dunsby; Optics Express, vol 16(25), p20306-20316, (2008)">Dunsby 2008</a>]
-
-invented a brilliant single-objective light sheet technique called 'Oblique Plane Microscopy' (OPM) that bypassed many typical light sheet drawbacks. However his theoretical NA of 0.74 for a water immersion objective was significantly lower than the 1.33 limit for an aqueous sample. In 2018 B. Yang and B. Huang
-
-[<a class="citation" href="https://doi.org/10.1101/273359" title="High Numerical Aperture Epi-illumination Selective Plane Illumination Microscopy; B. Yang, Y. Wang, S. Feng, V. Pessino, N. Stuurman and B. Huang; bioRxiv, (2018)">Yang 2018</a>]
-
-made a clever modification to OPM to achieve an NA of 1.06 and incorporated the elegant galvo-based volumetric scanning method invented by M.B. Bouchard and E.M.C. Hillman
-
-[<a class="citation" href="https://doi.org/10.1038/nphoton.2014.323" title="Swept confocally-aligned planar excitation (SCAPE) microscopy for high-speed volumetric imaging of behaving organisms; M.B. Bouchard, V. Voleti, C.S. Mendes, C. Lacefield, W. B. Grueber, R.S. Mann, R.M. Bruno and E.M.C. Hillman; Nature Photonics, vol 9, p113-119, (2015)">Bouchard 2015</a>].</p>
-
-<p>Building on this work, we present a simple, robust and modular light sheet design with an NA in the 1.2-1.3 range, and discuss the key concepts and considerations for high NA single objective light sheet.</p>
+we can convert a standard microscope into a fast, gentle and high-resolution light-sheet instrument that works with standard coverslipped samples (Figure 1). Unlike any existing light sheet microscope, we sacrifice no <a href="./appendix.html#theoretical_performance">appreciable numerical aperture</a> with no <a href="#preliminary_data" target="_self">measurable loss in resolution</a>, yielding a strict improvement over standard confocal microscopy, rather than a tradeoff.</p>
 
 <figure id="Figure_1">
-<img src="images/Single_objective_light_sheet_emission_path_1.1.png" alt="Figure 1" id="Figure_1_jpg_1" style="width:100%;">
-<figcaption><strong>Figure 1: Generalized design diagram for an OPM emission path</figcaption>
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" id="Figure_1_vid"
+ poster="images/Quick_intro/High_NA_single-objective_light-sheet_scan_poster.png">
+ <source src="images/Quick_intro/High_NA_single-objective_light-sheet_scan.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<figcaption><strong>Figure 1: A cartoon of the important concepts of the single-objective light-sheet design.</strong> A primary objective/tube lens pair (red solid line/circle indicates the back focal plane (BFP) of the objective) images a 3D biological sample to an intermediate space. A scanning system relays this 3D image to another intermediate space, where it is collected by a second tube lens/objective pair (blue dashed BFP). The second objective creates an aberration-free 3D copy of the sample at near-unity magnification. This virtual 3D sample is then re-imaged via a third, tilted, microscope (green dotted BFP) which tilts the primary image plane. A light sheet is coupled into the primary objective in this tilted image plane (red solid beam) yielding a single-objective light-sheet microscope. Moving a single scanning mirror rapidly acquires 3D volumes. The three objective BFPs are imaged onto each other as shown by the red solid, blue dashed and green dotted circles. The red solid disk indicates the light sheet footprint at the BFP, and the yellow solid region indicates the collection numerical aperture of the system. Our design sacrifices <a href="./appendix.html#theoretical_performance">no appreciable amount</a> of the yellow area, with <a href="#preliminary_data" target="_self">no measurable loss</a> in resolution. </figcaption>
 </figure>
+<p></p>
+
+<p>We present a simple, low cost and robust design (Figure 2) with uncompromised spatio-temporal performance and provide design details for anyone to start building their own system (see the <a href="./appendix.html#Parts_em_optical">parts list</a>). </p>
+
+<figure id="Figure_2">
+<img src="images/Quick_intro/FOM2019_27_cropped.jpg" alt="Figure 2" id="Figure_2_jpg_1" style="width:100%;">
+<figcaption><strong>Figure 2: A visual breakdown of our design's components.</strong> Box <strong>A</strong> is a simple objective/tube lens pair, and can be a regular microscope stand. The primary objective is chosen for its high numerical aperture and intermediate index that is optimal for imaging deep into live biological samples at high resolution. Box <strong>B</strong> is a basic scanning relay with a single galvo mirror that can rapidly take volumes. Box <strong>C</strong> is another tube lens/objective pair that, together with box B, perfectly match the requirements of box A. Box <strong>D</strong> is yet another objective/tube lens pair, but this time the objective is a special component: the <a href="./appendix.html#AMS-AGY_v1.0">AMS-AGY objective</a>.</figcaption>
+</figure>
+<p></p>
+
+<p>Except for one lens, our design uses all stock components. All of the resulting opto-mechanical difficulties are solved by the single custom lens: the <a href="./appendix.html#AMS-AGY_v1.0">AMS-AGY objective.</a></p>
+
+<figure id="Figure_3">
+<img src="images/Quick_intro/AMS-AGY_objective_v1.0.png" alt="Figure 3" id="Figure_3_jpg_1" style="width:100%;">
+<figcaption><strong>Figure 3: The <a href="./appendix.html#AMS-AGY_v1.0"><strong>AMS-AGY objective v1.0.</strong></a></strong> A photo and CAD render of the special objective that resolves our opto-mechanical difficulties, enabling our design to deliver <a href="./appendix.html#theoretical_performance">the full numerical aperture</a> of the primary objective.</figcaption>
+</figure>
+<p></p>
+
+<p>If you are interested in acquiring this objective, please contact Jon Daniels at <a href="http://www.asiimaging.com/">Applied Scientific Imaging (ASI)</a> directly: <a href="mailto:jon@asiimaging.com" target="_self">jon@asiimaging.com</a> (or <a href="mailto:info@asiimaging.com" target="_self">info@asiimaging.com</a>). Note: the unit cost of this objective is a strong function of batch size; if enough labs express interest, ASI can commission a large batch, and the price per unit could be much lower.</p>
+
+<h3 id="initial_results">Initial results</h3>
+
+<p>We've built, aligned and tested the emission path of our high numerical aperture single-objective light-sheet microscope. The preliminary data suggests <strong>we can image a 30&deg; tilted plane with no measurable loss in resolution compared to a conventional microscope with the same primary objective</strong>:</p>
+
+<ul>
+<li><strong>Our Nikon-based remote refocus gives the same resolution as a conventional microscope:</strong> Using all Nikon objectives, the remote refocus portion of our emission path delivers at least 270 nm resolution at the centre of the field of view. This is the same resolution given by the primary objective on a standard commercial base. This is also consistent with our <a href="https://andrewgyork.github.io/remote_refocus/">previous work</a> where we achieved at best 240 nm resolution (270 nm typical) using an index-matched NA = 1.4 oil immersion objective with n<sub>oil</sub> = n<sub>Argolight</sub> = 1.525. Here we use the slightly lower NA = 1.35 silicone objective with index n<sub>silicone</sub> = 1.40 that is more appropriate for live biological samples (and therefore expected to underperform a little with the Argolight slide).</li>
+<li><strong>Our AMS-AGY-based remote refocus also gives the same resolution as a conventional microscope:</strong> Substituting the AMS-AGY objective for the third Nikon objective preserves 270 nm resolution in a conventional (untilted) remote refocus.</li>
+<li><strong>Our AMS-AGY emission path still gives the same resolution as a conventional microscope with a 30 degree tilt:</strong> using the AMS-AGY objective we tilt the third microscope to an angle of 30&deg; and retain the &lt;270 nm resolution on both parallel and perpendicular axes.</li>
+</ul>
+
+<p>We interpret these initial results as a clear demonstration that our design isn't just theoretical, and enables a single-objective light-sheet microscope without sacrificing any measurable resolution. By the Rayleigh criterion, 270 nm resolution corresponds to an effective NA of at least 1.2. This is consistent with our Zemax simulations of real lenses which rarely reach the full resolution predicted by ideal models.</p>
+
+<h3 id="preliminary_data">Preliminary data</h3>
+
+<h4>Purpose and experimental setup</h4>
+
+<p>The aim of this section is to rapidly release data that demonstrates the optical performance and potential of this microscope. The emphasis is on speed of delivery and transparency of information, rather than polish or completeness. Both data and analysis will be updated and improved as needed. Feedback is welcome and can be sent directly to the authors.</p>
+
+<p>The optics were arranged as per the <a href="./appendix.html#Parts_em_optical">parts list</a>. For speed, robustness and convenience we image the <a href="http://argolight.com/">Argolight</a> SIM slide with 488 nm laser excitation in a simple epi configuration. Coherent interference/speckle from the 488 laser source is present throughout the data and was tolerated to avoid delays. An additional Chroma ET525/50 emission filter was added immediately before the quad filter (item 12) to tighten up the emission band that is otherwise extremely broad. Image stacks were acquired by using a closed loop piezo actuator at the second objective. The xy stage, primary objective, galvo and third objective remained stationary during acquistion, and the camera exposure time and laser power were kept constant thoughout.</p>
+
+<h4>Optical configurations and data types</h4>
+
+<p>To benchmark the emission path and evaluate the new objective lens we acquired data in three configurations:</p>
+
+<ol>
+<li><strong>Nikon 40x 0.95 NA, tilt = 0&deg;</strong>. Substitute the third objective in the emission path for a Nikon 40x 0.95 NA air objective in a standard remote refocus arrangment (axially aligned with no tilt). We have detailed experience with both <a href="https://andrewgyork.github.io/remote_refocus/">remote refocus</a> and this objective lens so this setup provides a reliable system benchmark.</li>
+<li><strong>AMS-AGY v1.0, tilt = 0&deg;</strong>. Use the new objective with no tilt and compare directly to configuration 1.</li>
+<li><strong>AMS-AGY v1.0, tilt = 30&deg;</strong>. Use the new objective with a tilt of 30 degrees and compare to configurations 1 and 2. This is not necessarily the optimal choice of angle, but conveniently comparable to previous implementations of this technology.</li>
+</ol>
+
+<p>To explore the new lens we selected 4 different patterns on the Argolight SIM slide:</p>
+
+<ul>
+<li><strong>Target:</strong> a 240 &mu;m diameter set of concentric rings with a 10 &mu;m spacing. Each ring consist of two line pairs separated by 750 nm. (good for looking at the maximum field of view)</li>
+<li><strong>Grid:</strong> a 110x110 &mu;m<sup>2</sup> square grid with 10 &mu;m spacing. Each line pair is separated by 750 nm. (good for looking at the central higher-quality portion of the field of view and checking for field flatness and distortion)</li>
+<li><strong>SIM lines:</strong> 14 line pairs that range from fully overlapped to a separation of 390 nm in 30 nm steps. (good for evaluating resolution)</li>
+<li><strong>3D rings:</strong> 9x9x9 3-dimensional cubic array of submicron-diameter rings separated by  5 &mu;m in X, Y, and Z. (good for evaluating a 3D field of view).</li>
+</ul>
+
+<h4>Data</h4>
+
+<p>We now present the data for each of the 3 configurations, imaging the patterns and features as described in each case. The figures are interactive and have been (minimally) processed for the purposes of viewing. How each figure was generated from the raw image stack is detailed in an associated <code>readme.txt</code> file linked in each figure caption. Key processing steps are highlighted in each figure caption for ease of interpretation.</p>
+
+<h4>AMS-AGY vs Nikon, tilt = 0&deg;</h4>
+
+<p>Optical configuration 1 vs 2: the figures are interactive so be sure to toggle through the various options to see all the data.</p>
+
+<figure id="Figure_4">
+<img src="images/Prelim_data/AMS-AGY/Target/AMS-AGY_1.0_argolight_target_488_epi_with_coherence.png" alt="Figure 4" id="Figure_4_png" style="width:100%;">
+<table class="figure_controls">
+  <tr><td>Image = Target</td>
+  <td>Objective =</td>
+  <td><select id="figure_4_choice" onchange="update_figure_4()">
+    <option value="AMS-AGY" selected="selected">AMS-AGY (min-max)</option>
+	<option value="Nikon">Nikon (min-max)</option>
+	<option value="AMS-AGY_saturated">AMS-AGY (saturated)</option>
+    <option value="Nikon_saturated">Nikon (saturated)</option></select></td>
+	<td>(brightness scale)</td></tr>
+</table>
+<figcaption><strong>Figure 4: Target image comparing the AMS-AGY objective (v1.0) with the Nikon 40x 0.95 NA objective (no tilt).</strong> This figure shows the ~240x240 &mu;m<sup>2</sup> field of view covered by our camera sensor, with line pairs visible to the ~10th ring (~200 &mu;m) in both optical configurations (1 & 2). Note that this is well beyond the ~100 &mu;m diameter field of view we designed for. The illumination shows interference patterns from the coherent 488 nm epi excitation and is slightly off-center (as seen in the saturated image). Note that the saturated image also shows the ground edge of the AMS-AGY objective at a distance of ~125 &mu;m from the centre (as designed). For data processing see the <a href="images/Prelim_data/Readme_files/figure_4.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_5">
+<img src="images/Prelim_data/AMS-AGY/Grid/AMS-AGY_1.0_argolight_grid_488_epi_with_coherence.png" alt="Figure 5" id="Figure_5_png" style="width:100%;">
+<table class="figure_controls">
+  <tr><td>Image = Grid</td>
+  <td>Objective =</td>
+  <td><select id="figure_5_choice" onchange="update_figure_5()">
+    <option value="AMS-AGY" selected="selected">AMS-AGY (min-max)</option>
+	<option value="Nikon">Nikon (min-max)</option></select></td>
+	<td>(brightness scale)</td></tr>  
+</table>
+<figcaption><strong>Figure 5: Grid image comparing the AMS-AGY objective (v1.0) with the Nikon 40x 0.95 NA objective (no tilt).</strong> This 145x145 &mu;m<sup>2</sup> image shows a high quality 110x110 &mu;m<sup>2</sup> field of view, with line pairs clearly visible throughout and minimal distortions. For data processing see the <a href="images/Prelim_data/Readme_files/figure_5.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_6">
+<img src="images/Prelim_data/AMS-AGY/SIM/img0010.png" alt="Figure 6" id="Figure_6_png" style="width:100%;">
+<table class="figure_controls">
+  <tr><td>Image = SIM lines</td>
+  <td>Objective =</td>
+  <td><select id="figure_6_choice_objective" onchange="update_figure_6()">
+	<option value="AMS-AGY" selected="selected"> AMS-AGY (min-max) </option>  
+	<option value="Nikon"> Nikon (min-max) </option>
+        </select>
+	<td>(brightness scale)</td>
+  </tr>
+  <tr><td></td>
+  <td>Piezo position =</td>
+  <td><select id="figure_6_choice_piezo" onchange="update_figure_6()">
+	<option value="img0000"> 2.50 </option>  
+	<option value="img0001"> 2.25 </option>  
+	<option value="img0002"> 2.00 </option>  
+	<option value="img0003"> 1.75 </option>  
+	<option value="img0004"> 1.50 </option>  
+	<option value="img0005"> 1.25 </option>  
+	<option value="img0006"> 1.00 </option>  
+	<option value="img0007"> 0.75 </option>  
+	<option value="img0008"> 0.50 </option>  
+	<option value="img0009"> 0.25 </option>  
+        <option value="img0010" selected="selected"> 0.00 </option>
+        <option value="img0011"> -0.25</option>
+	<option value="img0012"> -0.50 </option>
+	<option value="img0013"> -0.75 </option>
+	<option value="img0014"> -1.00 </option>
+	<option value="img0015"> -1.25 </option>
+	<option value="img0016"> -1.50 </option>
+	<option value="img0017"> -1.75 </option>
+	<option value="img0018"> -2.00 </option>
+	<option value="img0019"> -2.25 </option>
+	<option value="img0020"> -2.50 </option></select></td>
+	<td>(&mu;m)</td></tr>
+</table>
+<figcaption><strong>Figure 6: SIM lines image stack comparing the AMS-AGY objective (v1.0) with the Nikon 40x 0.95 NA objective (no tilt).</strong> This 58x58 &mu;m<sup>2</sup> image shows a resolving power of at least 270 nm on the center of the field of view of the remote image for both configurations 1 and 2. This can be seen by focusing the image and counting down from the top rung (line pairs are clearly separable until at least the 5th rung). For data processing see the <a href="images/Prelim_data/Readme_files/figure_6.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_7">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" id="Figure_7_vid"
+ poster="images/Prelim_data/AMS-AGY/Rings/AMS-AGY_1.0_argolight_3D_rings_488_epi_with_coherence_3D_project_poster.png">
+ <source src="images/Prelim_data/AMS-AGY/Rings/AMS-AGY_1.0_argolight_3D_rings_488_epi_with_coherence_3D_project.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<table class="figure_controls">
+  <tr><td>Image = 3D rings</td>
+  <td>Objective =</td>
+  <td><select id="figure_7_choice" onchange="update_figure_7()">
+    <option value="AMS-AGY" selected="selected">AMS-AGY (min-max)</option>
+    <option value="Nikon">Nikon (min-max)</option></select></td>
+  <td>(brightness scale)</td></tr>  
+</table>
+<figcaption><strong>Figure 7: 3D rings image stacks comparing the AMS-AGY objective (v1.0) with the Nikon 40x0.95 objective (no tilt).</strong> This shows the 3D imaging capability of the remote refocus, and that the two objectives are qualitatively indistinguishable over this 3D field of view. The cubic grid of submicron-diameter rings occupies a 40x40x40 &mu;m<sup>3</sup> volume. For data processing see the <a href="images/Prelim_data/Readme_files/figure_7.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<h4>AMS-AGY 30&deg;</h4>
+
+<p>Optical configuration 3: note that the Nikon objective is incapable of tilting past ~6&deg;, so we only show data for the AMS-AGY objective. The figures are interactive so be sure to toggle through the various options to see all the data.</p>
+
+<figure id="Figure_8">
+<img src="images/Prelim_data/AMS-AGY_30/Target/MAX_AMS-AGY_1.0_30_argolight_target_488_epi_with_coherence.png" alt="Figure 8" id="Figure_8_png" style="width:100%;">
+<table class="figure_controls">
+  <tr><td>Image = Target</td>
+  <td>Data type =</td>
+  <td><select id="figure_8_choice" onchange="update_figure_8()">
+    <option value="max_z" selected="selected">max z, raw data (min-max)</option>
+    <option value="max_z_trans">max z, transformed (min-max)</option>
+	<option value="max_z_trans_sat">max z, transformed (saturated)</option></select></td>
+	<td>(brightness scale)</td></tr>
+</table>
+<figcaption><strong>Figure 8: Target image stack using the AMS-AGY (v1.0) objective with a 30&deg; tilt.</strong> This ~240x240 &mu;m<sup>2</sup> image shows a maxiumum-intensity Z-projection of a tilted image stack of the remote field of view. The illumination shows interference patterns from the coherent 488 nm excitation and is slightly off-center (as seen in the saturated image). Note that without any transformation, the raw projection shows the target 'stretched' along the y-axis due to the tilt of the objective. Re-scaling this axis by \(y \cos{(\alpha)}\) (= 0.866 for 30&deg;) restores the image to its correct scale (where &alpha; is the tilt angle). Again, the saturated image shows the ground glass edge of the AMS-AGY objective (as designed). For data processing see the <a href="images/Prelim_data/Readme_files/figure_8.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_9">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" id="Figure_9_vid"
+ poster="images/Prelim_data/AMS-AGY_30/Grid/AMS-AGY_1.0_30_argolight_grid_488_epi_with_coherence_stack_poster.png">
+ <source src="images/Prelim_data/AMS-AGY_30/Grid/AMS-AGY_1.0_30_argolight_grid_488_epi_with_coherence_stack.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<img src="./images/Prelim_data/AMS-AGY_30/Grid/MAX_AMS-AGY_1.0_30_argolight_grid_488_epi_with_coherence.png" alt="Figure 9" id="Figure_9_png" style="width:100%; display:none">
+<table class="figure_controls">
+  <tr><td>Image = Grid</td>
+  <td>Data type =</td>
+  <td><select id="figure_9_choice" onchange="update_figure_9()">
+    <option value="stack" selected="selected">raw data (min-max)</option>
+    <option value="max_z">max z, raw data (min-max)</option>
+	<option value="max_z_trans">max z, transformed (min-max)</option></select></td>
+	<td>(brightness scale)</td></tr>
+</table>
+<figcaption><strong>Figure 9: Grid image stack using the AMS-AGY (v1.0) objective with a 30&deg; tilt.</strong> This 145x145 &mu;m<sup>2</sup> image shows how moving the piezo on the second objective sweeps the 3D remote image across the image plane of the third objective. Taking a maxiumum-intensity Z-projection shows how the image is stretched on the y-axis (like the target example above). Re-scaling by \(y \cos{(\alpha)}\) restores the image to its correct shape and shows a high-quality 110x110 &mu;m<sup>2</sup> field of view with clearly visible line pairs and minimal distortions. For data processing see the <a href="images/Prelim_data/Readme_files/figure_9.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_10">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%; min-width:100%;" id="Figure_10_vid"
+ poster="images/Prelim_data/AMS-AGY_30/SIM_tilt/AMS-AGY_1.0_30_argolight_SIM_tilt_axis_488_epi_with_coherence_stack_poster.png">
+ <source src="images/Prelim_data/AMS-AGY_30/SIM_tilt/AMS-AGY_1.0_30_argolight_SIM_tilt_axis_488_epi_with_coherence_stack.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<img src="./images/Prelim_data/AMS-AGY_30/SIM_tilt/MAX_AMS-AGY_1.0_30_argolight_SIM_tilt_axis_488_epi_with_coherence.png" alt="Figure 9" id="Figure_10_png" style="width:100%; display:none">
+<table class="figure_controls">
+  <tr><td>Image = SIM lines</td>
+  <td>Data type =</td>
+  <td><select id="figure_10_choice" onchange="update_figure_10()">
+    <option value="stack_tilt" selected="selected">raw data, parallel to tilt axis (min-max)</option>
+    <option value="max_z_tilt">max z, parallel to tilt axis (min-max)</option>
+	<option value="stack">raw data, perpendicular to tilt axis (min-max)</option>
+	<option value="max_z">max z, perpendicular to tilt axis (min-max)</option></select></td>
+	<td>(brightness scale)</td></tr>
+</table>
+<figcaption><strong>Figure 10: SIM lines stack using the AMS-AGY (v1.0) objective with a 30&deg; tilt.</strong> This 58x58 &mu;m<sup>2</sup> image shows how moving the piezo on the second objective sweeps the 3D remote image across the image plane of the third objective. The image is stretched on the y-axis (like the target and grid example above). However either by pausing the stack video or taking a maximum z projection on this raw data it is clear that the system maintains a resolving power of 270 nm in both orientations, even with the 30&deg; tilt on the objective. The tilt axis is defined by the axis of rotation of the third microscope. For data processing see the <a href="images/Prelim_data/Readme_files/figure_10.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_11">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" id="Figure_11_vid"
+ poster="images/Prelim_data/AMS-AGY_30/Rings/AMS-AGY_1.0_30_argolight_3D_rings_488_epi_with_coherence_3D_project_poster.png">
+ <source src="images/Prelim_data/AMS-AGY_30/Rings/AMS-AGY_1.0_30_argolight_3D_rings_488_epi_with_coherence_3D_project.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<table class="figure_controls">
+  <tr><td>Image = 3D rings</td>
+  <td>Data type =</td>
+  <td><select id="figure_11_choice" onchange="update_figure_11()">
+    <option value="3D_project" selected="selected">3D projection (min-max)</option>
+	<option value="3D_project_trans">3D projection, transformed (min-max)</option></select></td>
+	<td>(brightness scale)</td></tr>  
+</table>
+<figcaption><strong>Figure 11: 3D rings image stack using the AMS-AGY (v1.0) objective with a 30&deg; tilt.</strong> This shows the 3D imaging capability of the remote refocus using the tilted AMS-AGY objective. This 3D view shows that the image is both stretched on the y-axis (as seen previously in the max z projections) and also sheared in the z axis. Applying the \(z \sin{(&alpha;)}\) shear correction together with the \(y \cos{(\alpha)}\) stretch correction restores the 3D pattern to its original shape, at which point it is qualitatively indistinguishable from the untilted configurations. The (tansformed) cubic grid of submicron-diameter rings occupies a 40x40x40 &mu;m<sup>3</sup> volume. For data processing see the <a href="images/Prelim_data/Readme_files/figure_11.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<figure id="Figure_12">
+<img src="images/Prelim_data/AMS-AGY_30/SIM_tilt/img0014.png" alt="Figure 12" id="Figure_12_png" style="width:100%;">
+<table class="figure_controls">
+  <tr><td>Image = SIM lines</td>
+  <td>Tilt axis orientation=</td>
+  <td><select id="figure_12_choice_orientation" onchange="update_figure_12()">
+	<option value="SIM_tilt" selected="selected"> Parallel (min-max) </option>  
+	<option value="SIM"> Perpendicular (min-max) </option>
+      </select></td>
+  <td>(brightness scale)</td>
+  </tr>
+  <tr><td></td>
+  <td>Piezo position =</td>
+  <td><select id="figure_12_choice_piezo" onchange="update_figure_12()"> 
+	<option value="img0000"> 3.50 </option>  
+	<option value="img0001"> 3.25 </option>  
+	<option value="img0002"> 3.00 </option>  
+	<option value="img0003"> 2.75 </option>  
+	<option value="img0004"> 2.50 </option>  
+	<option value="img0005"> 2.25 </option>  
+	<option value="img0006"> 2.00 </option>  
+	<option value="img0007"> 1.75 </option>  
+	<option value="img0008"> 1.50 </option>  
+        <option value="img0009"> 1.25 </option>
+        <option value="img0010"> 1.00</option>
+	<option value="img0011"> 0.75 </option>
+	<option value="img0012"> 0.50 </option>
+	<option value="img0013"> 0.25 </option>
+	<option value="img0014" selected="selected"> 0.00 </option>
+	<option value="img0015"> -0.25 </option>
+	<option value="img0016"> -0.50 </option>
+	<option value="img0017"> -0.75 </option>
+	<option value="img0018"> -1.00 </option>
+	<option value="img0019"> -1.25 </option>
+	<option value="img0020"> -1.50 </option>
+	<option value="img0021"> -1.75 </option>
+	<option value="img0022"> -2.00 </option>
+	<option value="img0023"> -2.25 </option>
+	<option value="img0024"> -2.50 </option>
+	<option value="img0025"> -2.75 </option>
+	</select></td>
+	<td>(&mu;m)</td></tr>
+</table>
+<figcaption><strong>Figure 12: SIM line image stacks from the AMS-AGY objective (v1.0) with a 30&deg; tilt. Here the image stacks have been transformed from the raw stacks (Figure 10) back into the usual X, Y, Z coordinate system of the primary objective/sample.</strong> The transformations are purely theoretical \(z \sin{(&alpha;)}\) shear correction and \(y \cos{(\alpha)}\) stretch corrections (as shown in Figure 11). These data show a resolving power of ~270 nm on the center of the field of view of the remote image in both orientations (parallell and perpendicular to the tilt axis). This can be seen by focusing the image and counting down from the top rung (line pairs are clearly separable until at least the 5th set). Note: the tilt axis is defined by the axis of rotation of the third microscope and the SIM pattern dimensions are 36x36 &mu;m<sup>2</sup>. For data processing see the <a href="images/Prelim_data/Readme_files/figure_12.txt"><code>readme.txt</code></a>.</figcaption>
+</figure>
+<p></p>
+
+<h3>Acknowledgements</h3>
+
+<p>This work was funded and supported by <a href="https://www.calicolabs.com/">Calico Life Sciences LLC</a> and we would like to acknowledge the fantastic research environment that has been created here by the senior staff. We have enjoyed a spectacular level of freedom and support that has made this work possible.</p>
+
+<p>In addition we thank the business development team at Calico for pursuing and arranging our external collaborations. In this regard we would like to specifically acknowledge our collaborations with <a href="https://www.nikoninstruments.com">Nikon</a> and <a href="https://specialoptics.com/">Special Optics</a> who have enabled our high-quality design and we look forward to future projects with these partners.</p>
 
 <h3><a href="./appendix.html">Appendix</a></h3>
-<p>Additional details and discussion can be found in the <a href="./appendix.html">appendix</a></p>
+<p>Additional details and discussion can be found in the <a href="./appendix.html">appendix</a>.</p>
 
 <noscript>
 <h3>Your browser doesn't seem to support Javascript. This document uses Javascript to generate a reference list, which would normally be displayed here. Either activate Javascript, or use the "Download PDF" link above if you want to see the reference list.</h3></noscript>

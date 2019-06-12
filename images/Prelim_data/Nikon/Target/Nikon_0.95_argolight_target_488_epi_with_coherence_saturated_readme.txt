@@ -1,0 +1,6 @@
+1) No cropping applied
+2) Use Image-> Adjust-> Brightness/Contrast
+    - Select 55-251
+    - Hit apply
+3) Save 16bit tiff to 8-bit tiff using ImageJ min-max scaling 0-255
+4) Use File-> Save As-> PNG
