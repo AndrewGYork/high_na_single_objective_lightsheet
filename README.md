@@ -1,5 +1,5 @@
 # (incomplete) High NA single-objective lightsheet
-<a href="https://doi.org/10.5281/zenodo.3244421"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3244421.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.3244420"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3244420.svg" alt="DOI"></a>
 
 A scientific publication, describing way to improve microscopy. This repository hosts everything you need to reproduce our results. Read the publication here: (not created yet)
 ~~https://calico.github.io/high_na_single_objective_lightsheet (hosted via the Calico Labs institutional GitHub account)
