@@ -211,3 +211,37 @@ function update_figure_12() {
   var img = document.getElementById("Figure_12_png");
   img.src = filename;
 }
+
+function update_tl_choice() {
+  var EFL = document.getElementById("tl_choice").value;
+  if ((EFL === "EFL129")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL135")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL143")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL150")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL161")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL169")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL179")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL188")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}  
+  if ((EFL === "EFL193")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL203")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL214")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL226")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}  
+  if ((EFL === "EFL321")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";}
+  if ((EFL === "EFL357")){
+  var filename = "./images/Tube_lens_assemblies/" + EFL + "_1.0.png";} 
+  var img = document.getElementById("tl_assembly_png");
+  img.src = filename;
+}
