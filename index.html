@@ -59,8 +59,9 @@ Note that this is a limited PDF or print version; animated and interactive figur
 <noscript>
 <h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.</h3></noscript>
 <h2>High NA single-objective light-sheet</h2>
-<p class="author_list">Alfred Millett-Sikking<sup>1*</sup> and Andrew G. York<sup>1&dagger;</sup></p>
+<p class="author_list">Alfred Millett-Sikking<sup>1*</sup>, Kevin M. Dean<sup>2</sup>, Reto Fiolka<sup>2,3</sup> and Andrew G. York<sup>1&dagger;</sup></p>
 <p class="author_affiliations"><sup>1</sup>Calico Life Sciences LLC, South San Francisco, CA 94080, USA</p>
+<p class="author_affiliations"><sup>2</sup>Department of Cell Biology, University of Texas Southwestern Medical Center</p><p class="author_affiliations"><sup>3</sup>Lyda Hill Department of Bioinformatics, University of Texas Southwestern Medical Center</p>
 <p class="contact_email">
 <sup>*</sup>Institutional email:
 <a href="mailto:amsikking+highNAlightsheet@calicolabs.com" target="_self">amsikking+highNAlightsheet@calicolabs.com</a>
@@ -75,14 +76,15 @@ Note that this is a limited PDF or print version; animated and interactive figur
 
 <ul>
 <li><a href="#quick_intro" target="_self">Quick intro</a></li>
-<li><a href="#design_options" target="_self">NEW - Design options</a></li>
+<li><a href="#design_options" target="_self">Design options</a></li>
 <li><a href="#initial_results" target="_self">Initial results</a></li>
 <li><a href="#preliminary_data" target="_self">Preliminary data</a></li>
+<li><a href="#preliminary_applications" target="_self">NEW - Preliminary examples of biological imaging</a></li>
 <li><a href="./appendix.html#Parts_em_optical">Parts list - emission path optical train</a></li>
 <li><a href="./appendix.html#AMS-AGY_v1.0">AMS-AGY objective v1.0</a></li>
-<li><a href="./appendix.html#Alignment_goals">NEW - Alignment goals</a></li>
-<li><a href="./appendix.html#Optical_configs">NEW - Optical configurations</a></li>
-<li><a href="./appendix.html#TL_assemblies">NEW - Tube lens assemblies</a></li>
+<li><a href="./appendix.html#Alignment_goals">Alignment goals</a></li>
+<li><a href="./appendix.html#Optical_configs">Optical configurations</a></li>
+<li><a href="./appendix.html#TL_assemblies">Tube lens assemblies</a></li>
 <li><a href="./appendix.html#FOM2019_abstract">Focus on Microscopy 2019 - Abstract</a></li>
 <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRIwXpX4IkhVHNha-SlVtEIfNCyUP2Lgmd0w3sIYsaPcLyWO93ec1NDzQRGg6Ws8N22PvYaNCGyIjB9/pub?start=false&loop=false&delayms=60000">Focus on Microscopy 2019 - Presentation slides.</a> This is currently a must-read for details. (WARNING: Google slides don't seem to work on iPhone; try Chrome).</li>
 </ul>
@@ -456,14 +458,90 @@ Here we use the slightly lower NA = 1.35 silicone objective with index n<sub>sil
 </figure>
 <p></p>
 
+<h3 id="preliminary_applications">Preliminary examples of biological imaging</h3>
+
+<h4>Single objective lightsheet (SOLS) at UTSW</h4>
+
+<p>We're proud and happy to report that Kevin Dean and Reto Fiolka's teams at UT Southwestern have built a single-objective lightsheet microscope incorporating an AMS-AGY v1.0 objective, and they've used this microscope to image a variety of biological samples. This is our favorite example of collaboration, peer review, and technology dissemination, all rolled into one. We look forward to their future publication; in the meantime, please contact <a href="mailto:Reto.Fiolka@utsouthwestern.edu" target="_self">Reto</a> or <a href="mailto:Kevin.Dean@utsouthwestern.edu", target="_self">Kevin</a> for details of this implementation. See below for their reported results.</p>
+
+<h4>Biological 3D imaging with the SOLS microscope (R.F. and K.M.D.)</h4>
+
+<p>We have tested the SOLS microscope on a variety of biological samples. To evaluate the optical sectioning performance, we imaged retinal pigment epithelial (RPE) cells labeled with GFP vimentin. Figure 13 shows the raw stack as acquired by the microscope. One can see that the dense vimentin fiber bundles are well sectioned and very little background is present.</p>
+
+<figure id="fig_rpe_gfp_vimentin_stack">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="images/preliminary_applications/rpe_vimentin.png">
+ <source src="images/preliminary_applications/rpe_vimentin.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<figcaption><strong>Figure 13: "Flythrough" of raw slices of an RPE cell labeled with GFP-Vimentin.</strong></figcaption>
+</figure>
+<p></p>
+
+<p>Viewing the data this way might be unfamiliar to a user accustomed to standard epifluorescence microscopes (e.g. a spinning disk). As illustrated in Figure 1, one slice is imaged at a time, at a shallow angle to the coverslip. A maximum-intensity projection (after the data has been sheared as described in Figure 8) gives a more conventional impression of the cell, as shown in Figure 14.</p>
+
+<figure id="fig_rpe_gfp_vimentin_projection">
+<img src="images/preliminary_applications/rpe_vimentin_projection.png" alt="RPE GFP vimentin projection" style="width:100%;">
+<figcaption><strong>Figure 14: Maximum intensity projection of a RPE cell labeled with GFP-Vimentin.</strong> </figcaption>
+</figure>
+<p></p>
+
+<p>To test our ability to measure fast intracellular dynamics, we imaged clathrin-mediated endocytosis in RPE cells. For this purpose, the cells were labeled with clathrin light-chain eGFP
+
+[<a class="citation" href="https://doi.org/10.1016/j.cell.2004.08.017" title="Endocytosis by random initiation and stabilization of clathrin-coated pits; Marcelo Ehrlich, Werner Boll, Antoine van Oijen, Ramesh Hariharan, Kartik Chandran, Max L. Nibert, Tomas Kirchhausen; Cell Vol. 118, Iss. 5, p591-605 (2004)">Ehrlich  2004</a>].
+
+We set the exposure time of the camera to 5 ms and acquired 501 z-slices for each timepoint, resulting in a volumetric acquisition time of 2.5 s. While the microscope can acquire much faster owing to the galvo z-scan shown in Figure 1, this slower acquisition speed allowed us to acquire continuously for more than two minutes with only moderate photobleaching. Figure 15 shows a flythrough of a deconvolved z-stack. One can observe clathrin coated pits both on the ventral and dorsal side of the cell. Figure 16 shows a movie of the same cell over 50 timepoints.</p>
+
+<figure id="fig_rpe_gfp_clathrin_stack">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="images/preliminary_applications/rpe_clathrin.png">
+ <source src="images/preliminary_applications/rpe_clathrin.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<figcaption><strong>Figure 15: Deconvolved slices through a group of RPE cells labeled with clathrin light-chain eGFP.</strong></figcaption>
+</figure>
+<p></p>
+
+<figure id="fig_rpe_gfp_clathrin_timelapse">
+<video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="images/preliminary_applications/rpe_clathrin_timelapse.png">
+ <source src="images/preliminary_applications/rpe_clathrin_timelapse.mp4" type="video/mp4">
+ Your browser doesn't support HTML5 MP4 video.`
+</video>
+<figcaption><strong>Figure 16: Maximum intensity projection of RPE cells labeled with clathrin light-chain eGFP. Data were sheared as described in Figure 8, and iteratively deconvolved.</strong></figcaption>
+</figure>
+<p></p>
+
+<p>Finally, to demonstrate the ability to image cells in physiologically relevant micro-environments away from stiff surfaces, we embedded MV3 cancer cells 
+
+[<a class="citation" href="https://doi.org/10.1002/ijc.2910480116" title="Establishment and characterization of a human melanoma cell line (MV3) which is highly metastatic in nude mice; Goos N. P. van Muijen, Kees F. J. Jansen, Ine M. H. A. Cornelissen, Dominique F. C. M. Smeets, Johan L. M. Beck, Dirk J. Ruiter; International Journal of Cancer 48(1):85-91 (1991)">van Muijen 1991</a>]
+
+expressing an eGFP AKT-PH biosensor
+
+[<a class="citation" href="https://doi.org/10.1083/jcb.151.6.1269" title="Spatial Sensing in Fibroblasts Mediated by 3′ Phosphoinositides; Jason M. Haugh, Franca Codazzi, Mary Teruel, Tobias Meyer; J Cell Biol. 151(6): 1269–1280. (2000)">Haugh 2000</a>,
+<a class="citation" href="https://doi.org/10.1083/jcb.201108152" title="Migrating fibroblasts reorient directionality by a metastable, PI3K-dependent mechanism; Erik S. Welf, Shoeb Ahmed, Heath E. Johnson, Adam T. Melvin, and Jason M. Haugh; J Cell Biol. 197(1): 105–114. (2012)">Welf 2012</a>]
+
+in fluorescently labeled collagen (Alexa 568). Figure 17 shows a rendering of a group of MV3 cells in collagen. The color coding of the surface is representative of the local curvature of the cells.</p>
+
+<figure id="fig_mv3_gfp_akt_biosensor">
+<img src="images/preliminary_applications/mv3_gfp_akt_biosensor.jpg" alt="MV3 cells expressing eGPF AKT-PH biosensor" style="width:100%;">
+<figcaption><strong>Figure 17: Rendering of MV3 cells expressing AKT-PH biosensor in fluorescently labeled collagen.</strong></figcaption>
+</figure>
+<p></p>
+
 <h3>Acknowledgements</h3>
 
+<h4>A.M.S. and A.G.Y.</h4>
 <p>This work was funded and supported by <a href="https://www.calicolabs.com/">Calico Life Sciences LLC</a> and we would like to acknowledge the fantastic research environment that has been created here by the senior staff. We have enjoyed a spectacular level of freedom and support that has made this work possible.</p>
 
 <p>In addition we thank the business development team at Calico for pursuing and arranging our external collaborations. In this regard we would like to specifically acknowledge our collaborations with <a href="https://www.nikoninstruments.com">Nikon</a> and <a href="https://specialoptics.com/">Special Optics</a> who have enabled our high-quality design and we look forward to future projects with these partners.</p>
 
+<h4>K.M.D. and R.F.</h4> 
+<p>We would like to thank Rosa Mino for providing the RPE CLCa-eGFP cells and Erik Welf for preparing the MV3 cancer cell sample. We are further grateful to Meghan Driscoll for rendering the MV3 and collagen data.</p>
+
 <h3><a href="./appendix.html">Appendix</a></h3>
 <p>Additional details and discussion can be found in the <a href="./appendix.html">appendix</a>.</p>
+
+<h3>Author contributions</h3>
+
+<p>K.M.D. and R.F. contributed the "Preliminary examples of biological imaging" section. A.M.S. and A.G.Y. contributed the other sections.</p>
 
 <noscript>
 <h3>Your browser doesn't seem to support Javascript. This document uses Javascript to generate a reference list, which would normally be displayed here. Either activate Javascript, or use the "Download PDF" link above if you want to see the reference list.</h3></noscript>
