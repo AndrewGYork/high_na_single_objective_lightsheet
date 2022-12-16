@@ -22,7 +22,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-
 /* Base text styles */
 
 body {
@@ -39,21 +38,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
   margin:36px 0 10px;
-  text-align: left;
 }
 
 p, ul, ol, table, dl {
   margin:0 0 22px;
 }
 
-p {
-    text-indent: 0px;
-}
-
 p.author_list {
   margin:0 0 0px;
   font-weight: 700;
-  text-align: left;
 }
 
 p.author_affiliations {
@@ -62,8 +55,8 @@ p.author_affiliations {
 }
 
 p.contact_email {
+  margin:0 0 0px;
   font-style: italic;
-  text-align: left;
 }
 
 p.abstract {
@@ -115,7 +108,7 @@ a:hover {
 }
 
 a small {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 em {
@@ -128,11 +121,13 @@ strong {
 
 sub {
   vertical-align: sub;
+  line-height:  100%;
   font-size: smaller;
 }
 
 sup {
   vertical-align: super;
+  line-height:  100%;
   font-size: smaller;
 }
 
@@ -203,11 +198,10 @@ p img {
 figure {
   border: 1px solid #ccc;
   background: #FFFFFF;
-  text-align: center;
 }
 
 figcaption {
-  font-size: 12px;
+  font-size: 13px;
   background: #FFFFFF;
   line-height: 150%;
   margin-right: 1%;
@@ -221,7 +215,7 @@ code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color:#000;
   background:#e7e7e7;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 pre {
@@ -245,7 +239,7 @@ table {
  }
 
 table.figure_controls {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 100%;
   margin-bottom: 0px;
 }
@@ -324,7 +318,7 @@ header ul {
 
 header li {
   list-style-type: none;
-  width:145px;
+  width:135px;
   height:15px;
   margin-bottom: 12px;
   line-height: 1em;
@@ -471,9 +465,13 @@ footer {
 }
 
 @media print {
+  header ul{
+    display:none;
+  }
+
   body {
     padding:0.4in;
-    font-size:12pt;
+    font-size:13px;
     color:#444;
   }
 }

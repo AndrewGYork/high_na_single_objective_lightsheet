@@ -15,9 +15,10 @@ Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
     <meta name="citation_title" content="High NA single-objective lightsheet">
     <meta name="citation_author" content="Alfred Millett-Sikking">
     <meta name="citation_author" content="Andrew G. York">
-    <meta name="citation_publication_date" content="2019/04/17">
+    <meta name="citation_publication_date" content="2019/06/12">
     <meta name="citation_journal_title" content="Github.io">
-    <meta name="citation_pdf_url" content="https://amsikking.github.io/high_na_single_objective_lightsheet/high_NA_lightsheet%20by%20AMSikking.pdf">
+    <meta name="citation_pdf_url" content=
+	"https://amsikking.github.io/high_na_single_objective_lightsheet/high_na_single_objective_lightsheet.pdf">
     <title>high_NA_lightsheet_by_AMSikking</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -41,11 +42,17 @@ Based on this theme: https://github.com/broccolini/dinky , which mentioned that 
       <header>
         <h1 class="header">High NA single-objective light-sheet</h1>
         <ul>
-          <li class="download"><a class="buttons" href="./appendix.html#under_construction">Download ZIP</a></li>
-          <li><a class="buttons github" href="./appendix.html#under_construction">View On GitHub</a></li>
-          <li><a class="buttons pdf" href="./appendix.html#under_construction">Download PDF</a></li>
+          <li class="download"><a class="buttons" 
+		  href="https://github.com/AndrewGYork/high_na_single_objective_lightsheet/zipball/master">Download ZIP</a></li>
+          <li><a class="buttons github" 
+		  href="https://github.com/AndrewGYork/high_na_single_objective_lightsheet">View On GitHub</a></li>
+          <li><a class="buttons pdf" 
+		  href="./high_na_single_objective_lightsheet.pdf">Download PDF</a></li>
         </ul>
-        <p class="header" style="text-align:left;">This project is maintained by <a class="header name" href="https://github.com/amsikking">amsikking</a> in the <a class="header name" href="https://andrewgyork.github.io/">York lab</a>, and was funded by <a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
+        <p class="header" style="text-align:left;">This project is maintained by 
+		<a class="header name" href="https://amsikking.github.io/">amsikking</a> in the 
+		<a class="header name" href="https://andrewgyork.github.io/">York lab</a>, and was funded by 
+		<a class="header name" href="https://www.calicolabs.com/">Calico Life Sciences LLC</a></p>
       </header>
 <!-- 
 ##############################################################
@@ -53,9 +60,12 @@ The real text begins here.
 ##############################################################
  -->
 <section>
-<h1>(in progress) Research article</h1>
+<h1>Research article</h1>
 <h3 class="onlyprint">
-Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version of this article, please visit one of the following links: <a href="https://amsikking.github.io/high_na_single_objective_lightsheet">https://amsikking.github.io/high_na_single_objective_lightsheet</a> <a href="https://andrewgyork.github.io/high_na_single_objective_lightsheet">https://andrewgyork.github.io/high_na_single_objective_lightsheet</a> <a href="https://calico.github.io/high_na_single_objective_lightsheet">https://calico.github.io/high_na_single_objective_lightsheet</a></h3>
+Note that this is a limited PDF or print version; animated and interactive figures are disabled. For the full version 
+of this article, please visit one of the following links:
+<a href="https://andrewgyork.github.io/high_na_single_objective_lightsheet">https://andrewgyork.github.io/high_na_single_objective_lightsheet</a>
+</h3>
 <noscript>
 <h3>Your browser doesn't seem to support Javascript. This document uses Javascript for interactive figures, math typesetting, and to automatically generate the reference list. Either activate Javascript, or use the "Download PDF" link above if you want properly typeset math and a reference list.</h3></noscript>
 <h2>High NA single-objective light-sheet</h2>
@@ -73,9 +83,15 @@ Note that this is a limited PDF or print version; animated and interactive figur
 </p>
 
 <h3>Abstract</h3>
-<p class="abstract"> This is an ongoing scientific project, so please check back regularly for updates. We describe how to design and build a module that converts a typical microscope into a high numerical aperture light-sheet microscope that uses only one objective at the sample. We intend it to be 'game changer' in the world of live cell imaging, greatly reducing phototoxicity without degrading image quality or breaking compatibility with existing sample preparation. Our method is compatible with coverslipped samples like slides, dishes and multiwell plates. The volumetric imaging performance is fast, gentle and high resolution, and the instrument is low cost and simple to align and maintain.</p>
+<p class="abstract">
+We describe how to design and build a module that converts a typical microscope into a high numerical aperture (NA)
+light-sheet microscope that uses only one objective at the sample. We intend it to be 'game changer' in the world of 
+live cell imaging, greatly reducing phototoxicity without degrading image quality or breaking compatibility with 
+existing sample preparation. Our method is compatible with coverslipped samples like slides, dishes and multiwell 
+plates. The volumetric imaging performance is fast, gentle and high resolution, and the instrument is low cost and 
+simple to align and maintain.</p>
 
-<h3>Visual abstract</h3>
+<h4>Visual abstract</h4>
 
 <figure id="visual_abstract">
 <video controls autoplay loop muted style="max-height:85%; max-width:100%;" poster="images/visual_abstract/visual_abstract.png">
@@ -86,29 +102,23 @@ Note that this is a limited PDF or print version; animated and interactive figur
 </figure>
 <p></p>
 
-<p class="abstract">Current highlights:</p>
-
-<ul>
-<li><a href="#quick_intro" target="_self">Quick intro</a></li>
-<li><a href="#design_options" target="_self">Design options</a></li>
-<li><a href="#initial_results" target="_self">Initial results</a></li>
-<li><a href="#preliminary_data" target="_self">Preliminary data</a></li>
-<li><a href="#preliminary_applications" target="_self">NEW - Preliminary examples of biological imaging</a></li>
-<li><a href="./appendix.html#Parts_em_optical">Parts list - emission path optical train</a></li>
-<li><a href="./appendix.html#AMS-AGY_v1.0">AMS-AGY objective v1.0</a></li>
-<li><a href="./appendix.html#Alignment_goals">Alignment goals</a></li>
-<li><a href="./appendix.html#Optical_configs">Optical configurations</a></li>
-<li><a href="./appendix.html#TL_assemblies">Tube lens assemblies</a></li>
-<li><a href="./appendix.html#FOM2019_abstract">Focus on Microscopy 2019 - Abstract</a></li>
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRIwXpX4IkhVHNha-SlVtEIfNCyUP2Lgmd0w3sIYsaPcLyWO93ec1NDzQRGg6Ws8N22PvYaNCGyIjB9/pub?start=false&loop=false&delayms=60000">Focus on Microscopy 2019 - Presentation slides.</a> This is currently a must-read for details. (WARNING: Google slides don't seem to work on iPhone; try Chrome).</li>
-</ul>
-
-<h3>Intended audience</h3>
+<h4>Intended audience</h4>
 <p class="abstract">Microscope builders/developers, microscope vendors and interested potential users.</p>
 
-<h3>Peer review status</h3>
-<p class="abstract">Work-in-progress first published <a href="https://doi.org/10.5281/zenodo.3244421">June 12, 2019</a>, updated <a href="https://doi.org/10.5281/zenodo.3376243">August 23, 2019</a> (This article is not yet peer-reviewed)</p>
+<h4>Peer review status</h4>
+<p class="abstract">First published <a href="https://doi.org/10.5281/zenodo.3244421">June 12, 2019</a>, updated <a href="https://doi.org/10.5281/zenodo.3376243">August 23, 2019</a> (This article is not yet peer-reviewed)</p>
 <p class="abstract">Cite as: <a href="https://doi.org/10.5281/zenodo.3244420">doi:10.5281/zenodo.3244420</a></p>
+
+<h3>Convenient links</h3>
+
+<ul>
+<li><a href="#design_options" target="_self">Design options</a></li>
+<li><a href="./appendix.html#Optical_configs">Optical configurations</a></li>
+<li><a href="./appendix.html#TL_assemblies">Tube lens assemblies</a></li>
+<li><a href="./appendix.html#AMS-AGY_v1.0">AMS-AGY objective v1.0</a></li>
+<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRIwXpX4IkhVHNha-SlVtEIfNCyUP2Lgmd0w3sIYsaPcLyWO93ec1NDzQRGg6Ws8N22PvYaNCGyIjB9/pub?start=false&loop=false&delayms=60000">
+Focus on Microscopy 2019 presentation slides</a>: a good intro for newcomers (may not work on iPhone; try Chrome).</li>
+</ul>
 
 <h3 id="quick_intro">Quick Intro</h3>
 <p>By combining and improving a series of optical innovations developed by many brilliant scientists
@@ -127,7 +137,7 @@ we can convert a standard microscope into a fast, gentle and high-resolution lig
  <source src="images/Quick_intro/High_NA_single-objective_light-sheet_scan.mp4" type="video/mp4">
  Your browser doesn't support HTML5 MP4 video.`
 </video>
-<figcaption><strong>Figure 1: A cartoon of the important concepts of the single-objective light-sheet design.</strong> A primary objective/tube lens pair (red solid line/circle indicates the back focal plane (BFP) of the objective) images a 3D biological sample to an intermediate space. A scanning system relays this 3D image to another intermediate space, where it is collected by a second tube lens/objective pair (blue dashed BFP). The secondary objective creates an aberration-free 3D copy of the sample at near-unity magnification. This virtual 3D sample is then re-imaged via a third, tilted, microscope (green dotted BFP) which tilts the primary image plane. A light sheet is coupled into the primary objective in this tilted image plane (red solid beam) yielding a single-objective light-sheet microscope. Moving a single scanning mirror rapidly acquires 3D volumes. The three objective BFPs are imaged onto each other as shown by the red solid, blue dashed and green dotted circles. The red solid disk indicates the light sheet footprint at the BFP, and the yellow solid region indicates the collection numerical aperture of the system. Our design sacrifices <a href="./appendix.html#theoretical_performance">no appreciable amount</a> of the yellow area, with <a href="#preliminary_data" target="_self">no measurable loss</a> in resolution. </figcaption>
+<figcaption><strong>Figure 1: A cartoon of the important concepts of the single-objective light-sheet design.</strong> A primary objective/tube lens pair (red solid line/circle indicates the back focal plane (BFP) of the objective) images a 3D biological sample to an intermediate space. A scanning system relays this 3D image to another intermediate space, where it is collected by a second tube lens/objective pair (blue dashed BFP). The secondary objective creates an aberration-free 3D copy of the sample at near-unity magnification. This virtual 3D sample is then re-imaged via a third, tilted, microscope (green dotted BFP) which tilts the primary image plane. A light-sheet is coupled into the primary objective in this tilted image plane (red solid beam) yielding a single-objective light-sheet microscope. Moving a single scanning mirror rapidly acquires 3D volumes. The three objective BFPs are imaged onto each other as shown by the red solid, blue dashed and green dotted circles. The red solid disk indicates the light-sheet footprint at the BFP, and the yellow solid region indicates the collection numerical aperture of the system. Our design sacrifices <a href="./appendix.html#theoretical_performance">no appreciable amount</a> of the yellow area, with <a href="#preliminary_data" target="_self">no measurable loss</a> in resolution. </figcaption>
 </figure>
 <p></p>
 
@@ -474,9 +484,9 @@ Here we use the slightly lower NA = 1.35 silicone objective with index n<sub>sil
 
 <h3 id="preliminary_applications">Preliminary examples of biological imaging</h3>
 
-<h4>Single objective lightsheet (SOLS) at UTSW</h4>
+<h4>Single-objective light-sheet (SOLS) at UTSW</h4>
 
-<p>We're proud and happy to report that Kevin Dean and Reto Fiolka's teams at UT Southwestern have built a single-objective lightsheet microscope incorporating an AMS-AGY v1.0 objective, and they've used this microscope to image a variety of biological samples. This is our favorite example of collaboration, peer review, and technology dissemination, all rolled into one. We look forward to their future publication; in the meantime, please contact <a href="mailto:Reto.Fiolka@utsouthwestern.edu" target="_self">Reto</a> or <a href="mailto:Kevin.Dean@utsouthwestern.edu", target="_self">Kevin</a> for details of this implementation. See below for their reported results.</p>
+<p>We're proud and happy to report that Kevin Dean and Reto Fiolka's teams at UT Southwestern have built a single-objective light-sheet microscope incorporating an AMS-AGY v1.0 objective, and they've used this microscope to image a variety of biological samples. This is our favorite example of collaboration, peer review, and technology dissemination, all rolled into one. We look forward to their future publication; in the meantime, please contact <a href="mailto:Reto.Fiolka@utsouthwestern.edu" target="_self">Reto</a> or <a href="mailto:Kevin.Dean@utsouthwestern.edu", target="_self">Kevin</a> for details of this implementation. See below for their reported results.</p>
 
 <h4>Biological 3D imaging with the SOLS microscope (R.F. and K.M.D.)</h4>
 
