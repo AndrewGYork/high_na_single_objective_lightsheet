@@ -10,3 +10,5 @@ This repository is intended to hold a (mostly) self-contained scientific publica
 * A (limited) PDF version of the publication; note that this does not include animated/interactive figures.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+![social_preview](https://github.com/amsikking/high_na_single_objective_lightsheet/blob/master/social_preview.png)
